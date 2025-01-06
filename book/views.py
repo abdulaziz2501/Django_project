@@ -5,9 +5,9 @@ def my_books(request):
         <h1>My Books</h1>
         <ul>
             <li><a href="Istiqlol_jallodlari">Istiqlol Jallodlari</a></li>
-            <li><a href="O'tkan_kunlar">O'tkan Kunlar</a></li>
+            <li><a href="Otkan_kunlar">O'tkan Kunlar</a></li>
             <li><a href="Mehrobdan_chayon">Mehrobdan Chayon</a></li>
-            <li><a href="Qor_qiyg'ir">Qor Qiyg'ir</a></li>
+            <li><a href="Qor_qiygir">Qor Qiyg'ir</a></li>
             <li><a href="Olovli_yillar">Olovli Yillar</a></li>
             <li><a href="Ufq">Ufq</a></li>
             <li><a href="Choliqushi">Choliqushi</a></li>
@@ -96,5 +96,12 @@ def Sarvqomat_dilbarim(request):
         <h1>Sarvqomat Dilbarim</h1>
         <p>Pirimqul Qodirovning romantik voqealar asosidagi romanlaridan biri.</p>
         <a href="../">Ortga</a>
+    """
+    return HttpResponse(html)
+
+def back(request):
+    html="""
+    <p> kitoblar </p>
+    <a href="../"> ortga</a>
     """
     return HttpResponse(html)
