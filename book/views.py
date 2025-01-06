@@ -2,7 +2,7 @@ from django.http import HttpResponse
 
 def my_books(request):
     html = """
-        <h1>My Books</h1>
+        <h1>Mening kitoblarim</h1>
         <ul>
             <li><a href="Istiqlol_jallodlari">Istiqlol Jallodlari</a></li>
             <li><a href="Otkan_kunlar">O'tkan Kunlar</a></li>
@@ -15,7 +15,6 @@ def my_books(request):
             <li><a href="Temur_tuzuklari">Temur Tuzuklari</a></li>
             <li><a href="Sarvqomat_dilbarim">Sarvqomat Dilbarim</a></li>
         </ul>
-        <a href="back">Ortga</a>
     """
     return HttpResponse(html)
 
@@ -96,12 +95,5 @@ def Sarvqomat_dilbarim(request):
         <h1>Sarvqomat Dilbarim</h1>
         <p>Pirimqul Qodirovning romantik voqealar asosidagi romanlaridan biri.</p>
         <a href="../">Ortga</a>
-    """
-    return HttpResponse(html)
-
-def back(request):
-    html="""
-    <p> kitoblar </p>
-    <a href="../"> ortga</a>
     """
     return HttpResponse(html)

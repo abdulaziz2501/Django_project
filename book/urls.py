@@ -13,5 +13,4 @@ urlpatterns = [
     path('Shum_bola/', Shum_bola, name='Shum_bola'),
     path('Temur_tuzuklari/', Temur_tuzuklari, name='Temur_tuzuklari'),
     path('Sarvqomat_dilbarim/', Sarvqomat_dilbarim, name='Sarvqomat_dilbarim'),
-    path('back/', back, name='back'),
 ]
