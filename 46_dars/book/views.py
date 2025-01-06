@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 
+
 def my_books(request):
     html = """
         <h1>Mening kitoblarim</h1>
@@ -18,6 +19,7 @@ def my_books(request):
     """
     return HttpResponse(html)
 
+
 def Istiqlol_jallodlari(request):
     html = """
         <h1>Istiqlol Jallodlari</h1>
@@ -25,6 +27,7 @@ def Istiqlol_jallodlari(request):
         <a href="../">Ortga</a>
     """
     return HttpResponse(html)
+
 
 def Otkan_kunlar(request):
     html = """
@@ -34,6 +37,7 @@ def Otkan_kunlar(request):
     """
     return HttpResponse(html)
 
+
 def Mehrobdan_chayon(request):
     html = """
         <h1>Mehrobdan Chayon</h1>
@@ -41,6 +45,7 @@ def Mehrobdan_chayon(request):
         <a href="../">Ortga</a>
     """
     return HttpResponse(html)
+
 
 def Qor_qiygir(request):
     html = """
@@ -50,6 +55,7 @@ def Qor_qiygir(request):
     """
     return HttpResponse(html)
 
+
 def Olovli_yillar(request):
     html = """
         <h1>Olovli Yillar</h1>
@@ -57,6 +63,7 @@ def Olovli_yillar(request):
         <a href="../">Ortga</a>
     """
     return HttpResponse(html)
+
 
 def Ufq(request):
     html = """
@@ -66,6 +73,7 @@ def Ufq(request):
     """
     return HttpResponse(html)
 
+
 def Choliqushi(request):
     html = """
         <h1>Choliqushi</h1>
@@ -73,6 +81,7 @@ def Choliqushi(request):
         <a href="../">Ortga</a>
     """
     return HttpResponse(html)
+
 
 def Shum_bola(request):
     html = """
@@ -82,6 +91,7 @@ def Shum_bola(request):
     """
     return HttpResponse(html)
 
+
 def Temur_tuzuklari(request):
     html = """
         <h1>Temur Tuzuklari</h1>
@@ -89,6 +99,7 @@ def Temur_tuzuklari(request):
         <a href="../">Ortga</a>
     """
     return HttpResponse(html)
+
 
 def Sarvqomat_dilbarim(request):
     html = """
