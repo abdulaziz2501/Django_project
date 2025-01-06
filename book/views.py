@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+
+def my_books(request):
+    html="""
+    <p> my books </p>
+    <a href="book/"> books</a>
+    
+    """
+
+    return HttpResponse(html)
