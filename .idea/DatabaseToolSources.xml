@@ -4,13 +4,6 @@
     <data-source name="database" uuid="f351c794-5292-4dc4-93f0-147ca87f2d2f" type="SQLITE">
       <base-info connect-type="DB_DEFAULT" product="SQLite" version="3.45.1" major-version="3" minor-version="45" jdbc-name="SQLite JDBC" jdbc-version="3.45.1.0" jdbc-major-version="3" jdbc-minor-version="45" />
       <user-name />
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema">
-            <name qname="main" operator="@" />
-          </node>
-        </introspection-scope>
-      </schema-mapping>
       <choose-schema-mapping>
         <introspection-scope>
           <node kind="schema">
