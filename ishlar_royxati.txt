@@ -1,0 +1,22 @@
+48-dars ORM dan query larga 2 tadan misol
+49 -dars takrorlash
+50-dars static and template ni qanday yasalishini bilish kerak django zip faylini o'zimizga moslashtirish
+51-dars formlar va jinja tempalte lar haqida register.zip faylini taxrirlash
+52-dars modelform git, github haqida
+
+
+
+ertaga 9 yanvar shularni qilishimiz kerak agar shu ketishda bo;sa kuniga kamida 2 tadan darsni qilishimiz kerak
+hozirda 63 dars yuklangan ertaga 64 dars yuklanadi
+agar 2 tadan kuniga qiladigan bo'lsak 10 yanvardan boshlanadi 53-darsdan
+10-yanvar -> 53,54 dars
+11-yanvar -> 55,56 dars katta uyda yig'ilish bor shuni inobatga olish kerak ertaroq tugatish kerak
+12-yanvar -> 57,58 dars
+13-yanvar -> 59,60 dars ish kunim ko'proq qiolishim kerak
+14-yanvar -> 61,62 dars
+15-yanvar -> 61,62 dars
+16-yanvar -> 63,64 dars
+17-yanvar -> 65,66 dars ish kunim qaysi darsga kelgan bo'lsam yetib olishim kerak (67 darsga kelishimiz mumkin yana 5 ta dars qoladi shunda)
+
+yanvarni oxirida hamma darslar tugaydi shunga qarab harakat qilish kerak
+

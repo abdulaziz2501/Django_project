@@ -8,3 +8,5 @@ admin.site.register(Book)
 admin.site.register(Post)
 
 # Abdulaziz
+
+
