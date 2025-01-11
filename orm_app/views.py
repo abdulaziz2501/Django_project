@@ -3,7 +3,7 @@ from .models import Countries
 from django.http import HttpResponse
 
 # Create your views here.
-def orm_list(request):
+def Countries(request):
     countries= Countries.objects.all()
     # for c in countries:
     #     print(c)

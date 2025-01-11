@@ -1,5 +1,5 @@
-48-dars ORM dan query larga 2 tadan misol
-49 -dars takrorlash
+48-dars ORM dan query larga 2 tadan misol Bajarildi
+49 -dars takrorlash  Bajarildi
 50-dars static and template ni qanday yasalishini bilish kerak django zip faylini o'zimizga moslashtirish
 51-dars formlar va jinja tempalte lar haqida register.zip faylini taxrirlash
 52-dars modelform git, github haqida
