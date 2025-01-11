@@ -12,7 +12,7 @@ agar 2 tadan kuniga qiladigan bo'lsak 10 yanvardan boshlanadi 53-darsdan
 10-yanvar -> 53,54 dars
 11-yanvar -> 55,56 dars katta uyda yig'ilish bor shuni inobatga olish kerak ertaroq tugatish kerak
 12-yanvar -> 57,58 dars
-13-yanvar -> 59,60 dars ish kunim ko'proq qiolishim kerak
+13-yanvar -> 59,60 dars ish kunim ko'proq qilishim kerak
 14-yanvar -> 61,62 dars
 15-yanvar -> 61,62 dars
 16-yanvar -> 63,64 dars
