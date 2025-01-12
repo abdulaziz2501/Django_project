@@ -2,9 +2,9 @@ from django.urls import path
 from .views import *
 
 urlpatterns= [
-    path('Table_database/', Table_database, name='Menu'),
+    path('', Table_database, name='Menu'),
     path('Countries_all/', Countries_all, name='Countries'),
-    path('Employee/', Employee_all, name='Employees'),
+    path('Employee_all/', Employee_all, name='Employees'),
     path('Employee_limit1/', Employee_limit1, name='Employees'),
     path('Employee_limit2/', Employee_limit2, name='Employees'),
     path('Employee_filter/', Employee_filter, name='Employee_filter'),
@@ -12,5 +12,6 @@ urlpatterns= [
     path('Employee_between/', Employee_between, name='Employee_between'),
     path('Employee_and/', Employee_and, name='Employee_and'),
     path('Employee_in/', Employee_in, name='Employee_in'),
+    path('Location_not/', Location_not, name='Location_not'),
     path('Countries_count/', Countries_count, name='Countries counts'),
 ]

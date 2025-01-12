@@ -11,6 +11,7 @@ def Countries_all(request):
     country_list =""
     for c in countries:
         country_list +=f"<li>{c}</li>"
+    country_list+='<a href="../">Ortga</a>'
     return HttpResponse(f"<ul>{country_list}</ul>")
 
 
@@ -19,6 +20,8 @@ def Employee_all(request):
     country_list = ""
     for c in emp:
         country_list += f"<li>{c.first_name}  {c.last_name}</li>"
+
+    country_list += '<a href="../">Ortga</a>'
     return HttpResponse(f"<ul>{country_list}</ul>")
 
 def Employee_limit1(request):
@@ -26,6 +29,7 @@ def Employee_limit1(request):
     country_list = ""
     for c in emp:
         country_list += f"<li>{c.first_name}  {c.last_name}</li>"
+    country_list += '<a href="../">Ortga</a>'
     return HttpResponse(f"<ul>{country_list}</ul>")
 
 def Employee_limit2(request):
@@ -33,11 +37,12 @@ def Employee_limit2(request):
     country_list = ""
     for c in emp:
         country_list += f"<li>{c.first_name}  {c.last_name}</li>"
+    country_list += '<a href="../">Ortga</a>'
     return HttpResponse(f"<ul>{country_list}</ul>")
 
 
 def Employee_filter(request):
-    emp= Employees.objects.filter(id=1)
+    emp= Employees.objects.filter(employee_id=100)
     # Employees.objects.filter(age__gt=18)
     # Employees.objects.filter(age__gte=18)
     # Employees.objects.filter(age__lt=18)
@@ -46,14 +51,16 @@ def Employee_filter(request):
     country_list = ""
     for c in emp:
         country_list += f"<li>{c.first_name}  {c.last_name}</li>"
+    country_list += '<a href="../">Ortga</a>'
     return HttpResponse(f"<ul>{country_list}</ul>")
 
 
 def Employee_between(request):
-    emp= Employees.objects.filter(age__range=(10, 20))
+    emp= Employees.objects.filter(employee_id__range=(100, 110))
     country_list = ""
     for c in emp:
         country_list += f"<li>{c.first_name}  {c.last_name}</li>"
+    country_list += '<a href="../">Ortga</a>'
     return HttpResponse(f"<ul>{country_list}</ul>")
 
 
@@ -75,38 +82,40 @@ def Employee_like(request):
     country_list = ""
     for c in emp:
         country_list += f"<li>{c.first_name}  {c.last_name}</li>"
+    country_list += '<a href="../">Ortga</a>'
     return HttpResponse(f"<ul>{country_list}</ul>")
 
-def Employee_in(request):
-    emp= Employees.objects.filter(id__in=[101, 102])
-    country_list = ""
-    for c in emp:
-        country_list += f"<li>{c.first_name}  {c.last_name}</li>"
-    return HttpResponse(f"<ul>{country_list}</ul>")
 
 def Employee_and(request):
-    emp= Employees.objects.filter(gender='male', age__gt=25)
+    emp= Employees.objects.filter(employee_id=108, department_id=10)
     country_list = ""
     for c in emp:
         country_list += f"<li>{c.first_name}  {c.last_name}</li>"
+    country_list += '<a href="../">Ortga</a>'
     return HttpResponse(f"<ul>{country_list}</ul>")
 
+
+def Employee_in(request):
+    emp= Employees.objects.filter(employee_id__in=[101, 102])
+    country_list = ""
+    for c in emp:
+        country_list += f"<li>{c.first_name}  {c.last_name}</li>"
+    country_list += '<a href="../">Ortga</a>'
+    return HttpResponse(f"<ul>{country_list}</ul>")
 
 
 def Location_not(request):
     emp= Locations.objects.exclude(country_id='US')
     country_list = ""
     for c in emp:
-        country_list += f"<li>{c.first_name}  {c.last_name}</li>"
+        country_list += f"<li>{c.city}</li>"
+    country_list += '<a href="../">Ortga</a>'
     return HttpResponse(f"<ul>{country_list}</ul>")
 
-Countries.objects.count()
 def Countries_count(request):
-    emp= Countries.objects.exclude(country_id='US')
-    country_list = ""
-    for c in emp:
-        country_list += f"<li>{c.first_name}  {c.last_name}</li>"
-    return HttpResponse(f"<ul>{country_list}</ul>")
+    emp= Countries.objects.count()
+
+    return HttpResponse(f"<ul>Countries counter - > {emp} <br> <a href='../'>Ortga</a></ul>")
 
 
 
@@ -135,6 +144,7 @@ def Table_database(request):
                 <li><a href="Employee_between">Employee_between</a></li>
                 <li><a href="Employee_and">Employee_and</a></li>
                 <li><a href="Employee_in">Employee_in</a></li>
+                <li><a href="Location_not">Location_not</a></li>
                 <li><a href="Countries_count">Countries_count</a></li>
             </ul>
         """
