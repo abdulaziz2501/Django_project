@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DatabaseToolSources">
-    <data-source name="Django data" uuid="0b35444d-48b6-4017-a7eb-01f16f2b588d" type="SQLITE">
+    <data-source name="sample-database" uuid="a27fd38a-69e8-48ca-a38a-c081960a68fd" type="SQLITE">
       <base-info connect-type="DB_DEFAULT" product="SQLite" version="3.45.1" major-version="3" minor-version="45" jdbc-name="SQLite JDBC" jdbc-version="3.45.1.0" jdbc-major-version="3" jdbc-minor-version="45" />
       <user-name />
       <schema-mapping>
@@ -21,7 +21,7 @@
       <use-database kind="schema">
         <name qname="main" operator="@" />
       </use-database>
-      <url>jdbc:sqlite:D:/Django_project/db.sqlite3</url>
+      <url>jdbc:sqlite:/home/abdulaziz/PycharmProjects/Django_project/sample-database.db</url>
       <remarks />
       <vm-options />
       <driver-info id="sqlite.xerial" />
