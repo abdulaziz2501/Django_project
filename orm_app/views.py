@@ -130,8 +130,12 @@ def Countries_count(request):
 # book.publisher.name
 
 def Employee_Countries_join(request):
-    join = Employees.objects.select_related('manager').get(employee_id=102)
-    join.manager.first_name
+    employees = Employees.objects.select_related('job').all()
+    country_list = ""
+    for c in employees:
+        country_list += f"<li>{c.first_name}</li>"
+    country_list += '<a href="../">Ortga</a>'
+    return HttpResponse(f"<ul>{country_list}</ul>")
 
 def Table_database(request):
     html = """
