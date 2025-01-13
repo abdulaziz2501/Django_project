@@ -119,17 +119,19 @@ def Countries_count(request):
 
 
 
-# SELECT name
-# FROM Book
+# SELECT first_name
+# FROM Employees
 # LEFT JOIN Publisher
-# ON Book.publisher_id = Publisher.id
-# WHERE Book.id=1;
+# ON Employees.publisher_id = Publisher.id
+# WHERE Employees.id=1;
 #
 #
-# book = Book.objects.select_related('publisher').get(id=1)
+# book = Employees.objects.select_related('publisher').get(id=1)
 # book.publisher.name
 
-
+def Employee_Countries_join(request):
+    join = Employees.objects.select_related('manager').get(employee_id=102)
+    join.manager.first_name
 
 def Table_database(request):
     html = """
@@ -145,6 +147,7 @@ def Table_database(request):
                 <li><a href="Employee_and">Employee_and</a></li>
                 <li><a href="Employee_in">Employee_in</a></li>
                 <li><a href="Location_not">Location_not</a></li>
+                <li><a href="Employee_Countries_join">Employee_Countries_join</a></li>
                 <li><a href="Countries_count">Countries_count</a></li>
             </ul>
         """

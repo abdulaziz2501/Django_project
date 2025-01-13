@@ -13,5 +13,6 @@ urlpatterns= [
     path('Employee_and/', Employee_and, name='Employee_and'),
     path('Employee_in/', Employee_in, name='Employee_in'),
     path('Location_not/', Location_not, name='Location_not'),
+    path('Employee_Countries_join/', Employee_Countries_join, name='Employee_Countries_join'),
     path('Countries_count/', Countries_count, name='Countries counts'),
 ]
