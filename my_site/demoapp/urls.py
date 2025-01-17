@@ -3,6 +3,6 @@ from .views import *
 
 
 urlpatterns=[
-    path('', customer_form, name="customer_form"),
+    path('', main, name="main"),
     # path('list/', customer_list, name="customer_lists"),
 ]
