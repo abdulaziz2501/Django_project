@@ -20,4 +20,4 @@ def customer_list(request):
     ctx={
         'customers':customers
     }
-    return redirect(request, 'table.html', ctx)
+    return redirect(request, 'index.html', ctx)
