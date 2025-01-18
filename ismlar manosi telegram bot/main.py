@@ -1,4 +1,5 @@
 import json
+from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from config import token_name
 
@@ -9,7 +10,7 @@ def load_data():
     with open('ismlar_manosi.json', 'r', encoding='utf-8') as file:
         return json.load(file)
 
-def start(update, context) -> None:
+def start(update: Update, context) -> None:
     update.message.reply_text("Salom! Ismingizni kiriting, men uning ma'nosini aytaman.")
 
 def find_meaning(ism, data):
