@@ -56,7 +56,7 @@ def post_share(request, post_id):
             title = f"{cd['name']} sizga {post.title} ni o'qishni taklif etadi."
             message = f"{post.title} maqolasini o'qing: {post_url}\n\n" \
                       f"{cd['name']}ning izohi: {cd['comments']}"
-            send_mail(title, message, 'matemmix@gmail.com', [cd['to']], fail_silently=False)
+            send_mail(title, message, 'abduhakimovabdulaziz52@gmail.com', [cd['to']], fail_silently=False)
             sent = True
 
     else:
