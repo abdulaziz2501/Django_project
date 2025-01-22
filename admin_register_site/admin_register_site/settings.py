@@ -76,7 +76,7 @@ WSGI_APPLICATION = "admin_register_site.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": BASE_DIR / "admin_register_site.sqlite3",
     }
 }
 
