@@ -11,6 +11,7 @@ class Faculty(models.Model):
 
 class Kafedra(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
+    fakultet = models.ForeignKey(Faculty, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.name
