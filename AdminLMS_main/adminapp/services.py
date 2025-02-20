@@ -19,7 +19,7 @@ def dictfetchone(cursor):
 
 def get_faculties():
     with closing(connection.cursor()) as cursor:
-        cursor.execute("""SELECT * from adminapp_faculty""")
+        cursor.execute("""SELECT * from adminapp_faculty order by id""")
         faculties = dictfetchall(cursor)
         return faculties
 
@@ -52,7 +52,7 @@ def get_teacher():
         cursor.execute("""SELECT adminapp_teacher.id, adminapp_teacher.first_name, adminapp_teacher.last_name,
         adminapp_teacher.age, adminapp_kafedra.name as kafedra_name, adminapp_subject.name as subject_name from 
         adminapp_teacher left join adminapp_kafedra on adminapp_teacher.kafedra_id = adminapp_kafedra.id
-        left join adminapp_subject on adminapp_teacher.subject_id = adminapp_subject.id""")
+        left join adminapp_subject on adminapp_teacher.subject_id = adminapp_subject.id order by adminapp_teacher.id""")
         teachers = dictfetchall(cursor)
         return teachers
 
@@ -62,6 +62,6 @@ def get_student():
         cursor.execute("""SELECT adminapp_student.id, adminapp_student.first_name, adminapp_student.last_name, 
         adminapp_student.age, 
         adminapp_group.name as group_name, adminapp_student.image as image  from adminapp_student
-        left join adminapp_group on adminapp_student.group_id = adminapp_group.id""")
+        left join adminapp_group on adminapp_student.group_id = adminapp_group.id order by adminapp_student.id""")
         student = dictfetchall(cursor)
         return student
