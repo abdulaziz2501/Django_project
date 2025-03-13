@@ -4,23 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ko'z kasalliklari tahlili</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-<body class="container mt-5">
-    <h1 class="text-center">Ko'z kasalliklari tahlili</h1>
-    <form method="post" enctype="multipart/form-data" class="mb-4">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Tahlil qilish</button>
-    </form>
-    <h2>Yuklangan rasmlar:</h2>
-    <div class="row">
-        {% for image in images %}
-        <div class="col-md-3">
-            <img src="{{ image.image.url }}" class="img-thumbnail" alt="Uploaded Image">
+<body>
+    <div class="container">
+        <h1>Ko'z kasalliklari tahlili</h1>
+
+        <main class="container">
+            <section class="upload-section">
+                <div id="dropzone" class="dropzone">
+                    <p>Tasvir yuklash uchun bosing yoki shu yerga tashlang</p>
+                    <input type="file" id="fileInput" accept="image/*" style="display: block;">
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressBar" class="progress" style="width: 0%;"></div>
+                </div>
+            </section>
+
+            <section id="resultsSection" class="results-section">
+                <h2>Yuklangan rasmlar:</h2>
+                <div class="row">
+                    {% for image in images %}
+                    <div class="col-md-3">
+                        <img src="{{ image.image.url }}" class="img-thumbnail" alt="Uploaded Image">
+                    </div>
+                    {% empty %}
+                    <p>Hali hech qanday rasm yuklanmagan.</p>
+                    {% endfor %}
+                </div>
+            </section>
+        </main>
+
+        <div class="upload-container">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="upload-box" id="drop-zone">
+                    <img src="{% static 'images/upload-icon.png' %}" alt="Upload" class="upload-icon">
+                    <p>Rasm yuklash uchun bosing yoki shu yerga tashlang</p>
+                    <input type="file" name="image" id="file-input" accept="image/*" required>
+                </div>
+                <div class="preview-container" id="image-preview" style="display: none;">
+                    <img id="preview-image" src="#" alt="Preview">
+                    <button type="button" class="remove-btn" id="remove-image">❌</button>
+                </div>
+                <button type="submit" class="submit-btn">Tahlil qilish</button>
+            </form>
         </div>
-        {% endfor %}
+
+        <div class="instructions">
+            <h2>Qo'llanma:</h2>
+            <ul>
+                <li>Ko'z tasvirini yuklang (.jpg, .png formatda)</li>
+                <li>Tahlil qilish tugmasini bosing</li>
+                <li>Natijani ko'rish uchun kuting</li>
+            </ul>
+        </div>
     </div>
 
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>

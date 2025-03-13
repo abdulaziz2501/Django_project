@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahlil natijasi</title>
+<!--{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">#}-->
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tahlil natijasi</h1>
+        <div class="result-container">
+            <div class="image-container">
+                <h3>Yuklangan rasm:</h3>
+                <img src="{{ image_path }}" alt="Yuklangan rasm" class="uploaded-image">
+            </div>
+            <div class="diagnosis-container">
+                <h3>Tashxis:</h3>
+                <div class="diagnosis-results">
+                    {% for disease, probability in predictions.items() %}
+                    <div class="disease-item">
+                        <span class="disease-name">{{ disease }}:</span>
+                        <div class="probability-bar">
+                            <div class="probability-fill" style="width: {{ probability }}%"></div>
+                            <span class="probability-text">{{ probability }}%</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="diagnosis-summary">
+                    <h4>Xulosa:</h4>
+                    <p>{{ conclusion }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <a href="/" class="back-btn">Yangi tahlil</a>
+            <button class="download-btn" onclick="window.print()">Natijani saqlash</button>
+        </div>
+    </div>
+</body>
+</html>
