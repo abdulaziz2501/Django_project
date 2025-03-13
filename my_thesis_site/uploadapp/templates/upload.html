@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ko'z kasalliklari tahlili</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<!--    <link rel="stylesheet" href="{% static 'css/styles.css' %}">-->
+    <link rel="stylesheet" href="../../static/css/styles.css">
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,6 @@
             <section class="upload-section">
                 <div id="dropzone" class="dropzone">
                     <p>Tasvir yuklash uchun bosing yoki shu yerga tashlang</p>
-                    <input type="file" id="fileInput" accept="image/*" style="display: block;">
                 </div>
 
                 <div class="progress-bar">
@@ -41,7 +41,7 @@
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="upload-box" id="drop-zone">
-                    <img src="{% static 'images/upload-icon.png' %}" alt="Upload" class="upload-icon">
+                    <img src="{% static 'images/images.jpg' %}", width="256" alt="Upload" class="upload-icon">
                     <p>Rasm yuklash uchun bosing yoki shu yerga tashlang</p>
                     <input type="file" name="image" id="file-input" accept="image/*" required>
                 </div>
